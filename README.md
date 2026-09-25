@@ -1,5 +1,0 @@
-# entire health platform for extensive wearable sensor data analytics and inference
-
-`this entire project started with building a research project on developing local federated models on health data on the basis of local regions to have sensitivity or recall towards anomalies. but a device such that doesn't exist that's viable to do a large scale study on people, so we created the device, FROM SCRATCH. 
-
-this project is something that came out of my heart, and everything we developed is with love, so please support and contribute if you can. `
