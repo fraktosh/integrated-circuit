@@ -1,0 +1,268 @@
+{
+  "advisory": {
+    "drc_rule_pairs": 0
+  },
+  "blocking": 39,
+  "blocking_by": {
+    "assembly": 0,
+    "broken": 0,
+    "drc": 0,
+    "floorplan": null,
+    "impedance": null,
+    "length": null,
+    "net_widths": null,
+    "undersized": 0,
+    "unrouted": 39
+  },
+  "board": "C:\\Users\\mata magarmach\\Documents\\goals\\fl watch\\integrated-circuit\\krt_placement\\20261006_194827_place\\input.kicad_pcb",
+  "board_sha": "92e963f33f63ad025f39e11520761212fa5621432e5b99515ce8aa35cdebdc17",
+  "components": {
+    "assembly": {
+      "advisory_pairs": 1,
+      "buildable": true,
+      "coincident_origin_groups": [],
+      "conjuncts": {
+        "blocking": 0,
+        "coincident_origins": 0,
+        "containment_blocking": 0,
+        "courtyard_blocking_gating": null,
+        "locked_contacts": 0
+      },
+      "conjuncts_fired": [],
+      "conjuncts_unmeasured": [
+        "courtyard_blocking_gating"
+      ],
+      "containments": [],
+      "count": 0,
+      "count_basis": "blocking (buildable)",
+      "courtyard_gating_armed": false,
+      "courtyard_gating_basis": "no-baseline: report-only",
+      "courtyard_gating_reason": "no --baseline was passed, so check_assembly's fifth conjunct (moved-vs-baseline courtyard interpenetration) is unarmed and publishes null. board_score never passes one, so it is unarmed on every board this scorer grades",
+      "live_conjuncts_fired": [],
+      "locked_contact_pairs": [],
+      "pairs": [],
+      "ran": true,
+      "verdict": "buildable (blocking 0)",
+      "waived_pairs": 0
+    },
+    "broken": {
+      "count": 0,
+      "nets": {},
+      "poured_nets": [],
+      "poured_nets_meaning": "nets with at least one zone on the board, i.e. a broken one of these is repair_planes.py's job rather than route.py's. This is NOT a list of plane/power nets and is NOT a safe --ignore-nets population: a board that pours signal nets puts them in here too (measured: 332 of 545 pads).",
+      "ran": true
+    },
+    "drc": {
+      "by_type": {},
+      "count": 0,
+      "graded_at": 0.1,
+      "ran": true
+    },
+    "drc_rule_pairs": {
+      "by_type": {},
+      "count": 0,
+      "ran": true
+    },
+    "floorplan": {
+      "count": null,
+      "ran": false,
+      "reason": "no --intent given; the floorplan is ungraded"
+    },
+    "impedance": {
+      "count": null,
+      "ran": false,
+      "reason": "no --impedance-nets given; impedance is ungraded"
+    },
+    "length": {
+      "count": null,
+      "ran": false,
+      "reason": "no --length-groups given; length matching is ungraded"
+    },
+    "net_widths": {
+      "count": null,
+      "ran": false,
+      "reason": "no --net-min-widths given; per-net widths are ungraded"
+    },
+    "undersized": {
+      "by_type": {},
+      "count": 0,
+      "ran": true
+    },
+    "unrouted": {
+      "count": 39,
+      "nets": [
+        "+3V3",
+        "/D+",
+        "/D-",
+        "/INB-",
+        "/J1_CD",
+        "/J1_CMD",
+        "/J1_DAT0",
+        "/J1_DAT1",
+        "/OUT_A",
+        "/OUT_B",
+        "/Temp_SCL",
+        "/Temp_SDA",
+        "/U1_BAT",
+        "/U2_SDA",
+        "/U2_SDC",
+        "/U3_SCX",
+        "/U3_SDX",
+        "/U4_OUT",
+        "/U5_SCL",
+        "/U5_SDA",
+        "/USB_D+",
+        "/USB_D-",
+        "/VBUS",
+        "/VLDO",
+        "/VREF",
+        "/skin++",
+        "/~{CE}",
+        "/~{CHG}",
+        "/~{PGOOD}",
+        "/~{U5_ALERT}",
+        "GND",
+        "Net-(D2-K)",
+        "Net-(J2-CC1)",
+        "Net-(J2-CC2)",
+        "Net-(U4-ILIM)",
+        "Net-(U4-ISET)",
+        "Net-(U4-TMR)",
+        "Net-(U4-TS)",
+        "Net-(U9-INB+)"
+      ],
+      "open": [
+        "+3V3",
+        "/D+",
+        "/D-",
+        "/INB-",
+        "/J1_CD",
+        "/J1_CMD",
+        "/J1_DAT0",
+        "/J1_DAT1",
+        "/OUT_A",
+        "/OUT_B",
+        "/Temp_SCL",
+        "/Temp_SDA",
+        "/U1_BAT",
+        "/U2_SDA",
+        "/U2_SDC",
+        "/U3_SCX",
+        "/U3_SDX",
+        "/U4_OUT",
+        "/U5_SCL",
+        "/U5_SDA",
+        "/USB_D+",
+        "/USB_D-",
+        "/VBUS",
+        "/VLDO",
+        "/VREF",
+        "/skin++",
+        "/~{CE}",
+        "/~{CHG}",
+        "/~{PGOOD}",
+        "/~{U5_ALERT}",
+        "GND",
+        "Net-(D2-K)",
+        "Net-(J2-CC1)",
+        "Net-(J2-CC2)",
+        "Net-(U4-ILIM)",
+        "Net-(U4-ISET)",
+        "Net-(U4-TMR)",
+        "Net-(U4-TS)",
+        "Net-(U9-INB+)"
+      ],
+      "placement_blocked": {},
+      "placement_blocked_refs": [],
+      "ran": true
+    }
+  },
+  "connectivity_nets": [
+    "+3V3",
+    "/D+",
+    "/D-",
+    "/INB-",
+    "/J1_CD",
+    "/J1_CMD",
+    "/J1_DAT0",
+    "/J1_DAT1",
+    "/OUT_A",
+    "/OUT_B",
+    "/Temp_SCL",
+    "/Temp_SDA",
+    "/U1_BAT",
+    "/U2_SDA",
+    "/U2_SDC",
+    "/U3_SCX",
+    "/U3_SDX",
+    "/U4_OUT",
+    "/U5_SCL",
+    "/U5_SDA",
+    "/USB_D+",
+    "/USB_D-",
+    "/VBUS",
+    "/VLDO",
+    "/VREF",
+    "/skin++",
+    "/~{CE}",
+    "/~{CHG}",
+    "/~{PGOOD}",
+    "/~{U5_ALERT}",
+    "GND",
+    "Net-(D2-K)",
+    "Net-(J2-CC1)",
+    "Net-(J2-CC2)",
+    "Net-(U4-ILIM)",
+    "Net-(U4-ISET)",
+    "Net-(U4-TMR)",
+    "Net-(U4-TS)",
+    "Net-(U9-INB+)"
+  ],
+  "floors": {
+    "board": {
+      "min_clearance": 0.0,
+      "min_copper_edge_clearance": 0.2,
+      "min_hole_to_hole": 0.25,
+      "min_through_hole_diameter": 0.15,
+      "min_track_width": 0.1,
+      "min_via_annular_width": 0.05,
+      "min_via_diameter": 0.25
+    },
+    "declares_no_floor": false,
+    "default_netclass": {
+      "clearance": 0.1,
+      "track_width": 0.2,
+      "via_diameter": 0.5,
+      "via_drill": 0.3
+    },
+    "requested": {},
+    "source": "C:/Users/mata magarmach/Documents/goals/fl watch/integrated-circuit/krt_placement/20261006_194827_place/input.kicad_pro"
+  },
+  "kind": "board-score",
+  "label": "",
+  "net_name_audit": {
+    "board_nets": 80,
+    "checked": 117,
+    "fields_checked": [
+      "components.unrouted.nets",
+      "components.unrouted.open",
+      "connectivity_nets"
+    ],
+    "ran": true,
+    "unknown": {},
+    "unknown_count": 0
+  },
+  "quality": {
+    "copper_mm": 0,
+    "segments": 0,
+    "vias": 0
+  },
+  "schema": 1,
+  "ungraded": [
+    "floorplan",
+    "impedance",
+    "length",
+    "net_widths"
+  ],
+  "unknown": []
+}

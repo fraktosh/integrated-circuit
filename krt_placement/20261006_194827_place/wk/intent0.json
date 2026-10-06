@@ -1,0 +1,83 @@
+{
+ "assembly": {
+  "sides": "both",
+  "why": "observed: 6 pad-bearing part(s) on F and 49 on B, 2 reflow pass(es). every footprint BLOCK (#726): blocks sharing one reference are keyed with an ordinal suffix and counted separately. `pad_bearing` restricts that to blocks carrying at least one pad, and it is the count the populated-side verdict is taken from -- a zero-pad graphic on the back does not make a board double-sided."
+ },
+ "blocks": [],
+ "board": "input.kicad_pcb",
+ "context": {
+  "budget_withheld": {
+   "overlap_area": "1 unwaived courtyard interpenetration(s) past the blocking floors on the emitting board (run-23): an auto-budget would bless them"
+  },
+  "cutouts": [],
+  "decap_census": {
+   "beyond_radius": 7,
+   "beyond_radius_refs": [
+    "C1",
+    "C16",
+    "C2",
+    "C3",
+    "C5",
+    "C6",
+    "C7"
+   ],
+   "ics": 5,
+   "max_mm": 3.6000000000000014,
+   "max_mm_display": 3.6,
+   "median_mm": 0.2837,
+   "metric": "cap footprint centroid to IC bounding box, clamped to 0 inside (placement.groups.decap_tethers)",
+   "no_rail_chip": 0,
+   "no_rail_chip_refs": [],
+   "population": 18,
+   "search_radius_mm": 5.0,
+   "seeder_pin_scope": 18,
+   "source": "auto-tethers",
+   "tethers": 11,
+   "unaccounted": 0,
+   "worst_beyond_mm": 9.2125
+  },
+  "edge_contours": 0,
+  "file_locked": [],
+  "keepouts_note": "empty because a keep-out is a mechanical fact -- an enclosure rib, a standoff, a battery, a display window, an antenna clearance -- and none of those can be read off a board. \"[]\" here means NONE DECLARED, never \"not considered\". Declare them by hand; since #701 the seat search honours them, not only the grade.",
+  "note": "read-only, describing the board as it is. The outline is not editable by this toolchain: size, cutouts and slots are mechanical decisions the user owns"
+ },
+ "decaps": {},
+ "defaults": {
+  "zone_tolerance_mm": 0.5
+ },
+ "edge_connectors": [
+  {
+   "edge": "south",
+   "overhang_mm": {
+    "max": 1.92,
+    "min": 0.0
+   },
+   "ref": "J2"
+  },
+  {
+   "edge": "north",
+   "overhang_mm": {
+    "max": 0.977,
+    "min": 0.0
+   },
+   "ref": "J4"
+  }
+ ],
+ "envelope": {
+  "rect": [
+   67.8,
+   25.7,
+   86.0,
+   66.5
+  ],
+  "tolerance_mm": 0.5
+ },
+ "keepouts": [],
+ "kind": "floorplan-intent",
+ "legality_budget": {
+  "oob_count": 2
+ },
+ "must_lock": [],
+ "schema": 1,
+ "units": "mm"
+}
