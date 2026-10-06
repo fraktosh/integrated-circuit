@@ -13,8 +13,8 @@ param(
     [string]$Board,
     [string]$JarPath,
     [string]$KiCadPython,
-    [int]$MaxPasses = 0,            # 0 = Freerouting default
-    [int]$TimeoutMinutes = 60,
+    [int]$MaxPasses = 9999,         # effectively unlimited; freerouting stops by itself once every net is routed
+    [int]$TimeoutMinutes = 0,       # 0 = no timeout, run until freerouting finishes
     [switch]$SkipRules              # keep the .kicad_pro rules untouched
 )
 $ErrorActionPreference = 'Stop'
@@ -58,6 +58,8 @@ $java = if ($env:JAVA_HOME -and (Test-Path "$env:JAVA_HOME\bin\java.exe")) { "$e
         else { (Get-Command java -ErrorAction SilentlyContinue).Source }
 if (-not $java) { throw "java not found. Install JDK 21+ or set JAVA_HOME." }
 
+$jv = (& $java -version 2>&1 | Select-Object -First 1)
+Write-Host "Java ver: $jv"
 Write-Host "Board  : $Board`nPython : $KiCadPython`nJar    : $JarPath`nJava   : $java"
 
 # --- work dir (copy, original untouched) ---
@@ -76,13 +78,20 @@ if (-not $SkipRules -and (Test-Path (Join-Path $work 'board.kicad_pro'))) {
 if ($LASTEXITCODE) { throw "DSN export failed" }
 
 # --- route ---
-$args = @('-jar', $JarPath, '-de', (Join-Path $work 'board.dsn'), '-do', (Join-Path $work 'board.ses'))
-if ($MaxPasses -gt 0) { $args += @('-mp', $MaxPasses) }
+$q = { param($s) '"' + $s + '"' }
+$jargs = @('-jar', (& $q $JarPath), '-de', (& $q (Join-Path $work 'board.dsn')), '-do', (& $q (Join-Path $work 'board.ses')))
+$jargs += @('-mp', "$MaxPasses")   # always pass it: freerouting.json may hold a stale lower value
 $log = Join-Path $work 'freerouting.log'
-$proc = Start-Process $java -ArgumentList $args -NoNewWindow -PassThru -RedirectStandardOutput $log -RedirectStandardError "$log.err"
-if (-not $proc.WaitForExit($TimeoutMinutes * 60000)) { $proc.Kill(); Write-Warning "Timeout, using whatever was saved." }
+$proc = Start-Process $java -ArgumentList $jargs -NoNewWindow -PassThru -RedirectStandardOutput $log -RedirectStandardError "$log.err"
+if ($TimeoutMinutes -gt 0) {
+    if (-not $proc.WaitForExit($TimeoutMinutes * 60000)) { $proc.Kill(); Write-Warning "Timeout hit, freerouting killed." }
+} else { $proc.WaitForExit() }
 Get-Content $log | Select-String 'score|Saving|unrouted' | Select-Object -Last 5 | ForEach-Object { $_.Line }
-if (-not (Test-Path (Join-Path $work 'board.ses'))) { throw "No .ses produced. See $log" }
+if (-not (Test-Path (Join-Path $work 'board.ses'))) { 
+    Write-Host "---- freerouting stdout (tail) ----"; Get-Content $log -Tail 15 -ErrorAction SilentlyContinue
+    Write-Host "---- freerouting stderr (tail) ----"; Get-Content "$log.err" -Tail 15 -ErrorAction SilentlyContinue
+    throw "No .ses produced (exit code: $($proc.ExitCode)). Common causes: java older than 21, jar path not found, timeout hit before finish (lower -MaxPasses or raise -TimeoutMinutes). Logs: $log"
+}
 
 # --- import ---
 $out = Join-Path $dir "${name}_routed.kicad_pcb"
