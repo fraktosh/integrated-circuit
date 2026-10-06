@@ -1,0 +1,241 @@
+{
+ "advisory": 1,
+ "advisory_pairs": [
+  {
+   "a": "J4",
+   "area_mm2": 1.181,
+   "b": "J5",
+   "contained": false,
+   "contained_frac": 0.7511,
+   "depth_mm": 0.6384,
+   "kind": "courtyard",
+   "locked_ref": "",
+   "overlap_rect": [
+    73.675,
+    39.975,
+    75.525,
+    40.6134
+   ],
+   "shorts": [],
+   "side": "F",
+   "waived": false,
+   "waiver": ""
+  }
+ ],
+ "assembly_sides": "both",
+ "back_side_zero_pad_blocks": [],
+ "blocking": 0,
+ "blocking_pairs": [],
+ "board": "C:/Users/mata magarmach/Documents/goals/fl watch/integrated-circuit/krt_placement/20261006_194827_place/input.kicad_pcb",
+ "board_declares_no_floor": false,
+ "buildable": true,
+ "clearance": 0.1,
+ "clearance_source": "board netclass",
+ "coincident_origin_groups": [],
+ "coincident_origins": 0,
+ "coincident_origins_basis": "every footprint BLOCK (#726): blocks sharing one reference are keyed with an ordinal suffix, so they form a pair here like any other two parts. See duplicate_references for the names the board itself uses.",
+ "contained": 0,
+ "containment_blocking": 0,
+ "containments": [],
+ "courtyard_advisory": 0,
+ "courtyard_blocking": 1,
+ "courtyard_blocking_gating": null,
+ "courtyard_blocking_gating_pairs": [],
+ "courtyard_blocking_pairs": [
+  {
+   "a": "J4",
+   "area_mm2": 1.181,
+   "b": "J5",
+   "contained": false,
+   "contained_frac": 0.7511,
+   "depth_mm": 0.6384,
+   "kind": "courtyard",
+   "locked_ref": "",
+   "overlap_rect": [
+    73.675,
+    39.975,
+    75.525,
+    40.6134
+   ],
+   "shorts": [],
+   "side": "F",
+   "waived": false,
+   "waiver": ""
+  }
+ ],
+ "courtyard_gating_basis": "no-baseline: report-only",
+ "courtyard_pairs": [
+  {
+   "a": "J4",
+   "area_mm2": 1.181,
+   "b": "J5",
+   "contained": false,
+   "contained_frac": 0.7511,
+   "depth_mm": 0.6384,
+   "kind": "courtyard",
+   "locked_ref": "",
+   "overlap_rect": [
+    73.675,
+    39.975,
+    75.525,
+    40.6134
+   ],
+   "shorts": [],
+   "side": "F",
+   "waived": false,
+   "waiver": ""
+  }
+ ],
+ "courtyard_synthetic_refs": [],
+ "duplicate_references": {},
+ "fab_unjudged": 0,
+ "fab_unjudged_refs": [],
+ "footprint_blocks": 55,
+ "hole_conflicts": 0,
+ "locked_contact_pairs": [],
+ "locked_contacts": 0,
+ "oob_pad_amount": 0.0,
+ "oob_pad_basis": "part pad AABB vs outline inflated by the grading clearance (NOT the per-pad outline measure; see render_placement checklist.a_off_outline.pad_copper)",
+ "oob_pad_copper_basis": "per-PAD copper rects against the real outline at margin 0 (the authoritative measure; the same question render_placement answers in checklist.a_off_outline.pad_copper)",
+ "oob_pad_copper_count": 0,
+ "oob_pad_copper_refs": [],
+ "oob_pad_count": 0,
+ "oob_pad_refs": [],
+ "pad_clearance_required": [],
+ "pad_conflicts": 0,
+ "pad_edge": {
+  "argument_mm": null,
+  "basis": "analytic pad copper extrema (custom pads: parsed polygons) vs rectangular Edge.Cuts centreline; other outlines sampled, not certified; no body/track/via/fill check",
+  "complete": false,
+  "findings": [],
+  "measured_pads": 267,
+  "minimum_gap_by_ref_mm": {
+   "C1": 1.9500000000000028,
+   "C10": 3.7950000000000017,
+   "C11": 3.7950000000000017,
+   "C12": 3.7950000000000017,
+   "C13": 3.8049999999999926,
+   "C14": 2.200000000000003,
+   "C15": 2.200000000000003,
+   "C16": 2.200000000000003,
+   "C17": 3.0999999999999943,
+   "C18": 3.0999999999999943,
+   "C2": 1.9299999999999926,
+   "C3": 3.25,
+   "C4": 1.9050000000000011,
+   "C5": 1.9050000000000011,
+   "C6": 1.8499999999999943,
+   "C7": 1.8499999999999943,
+   "C8": 1.8499999999999943,
+   "C9": 3.7950000000000017,
+   "D2": 7.950000000000003,
+   "J1": 1.875,
+   "J2": 1.3349999999999937,
+   "J3": 1.2750000000000057,
+   "J4": 0.3245010000000015,
+   "J5": 5.875,
+   "J6": 1.875,
+   "R1": 7.950000000000003,
+   "R10": 5.75,
+   "R11": 5.75,
+   "R12": 2.200000000000003,
+   "R13": 1.2999999999999972,
+   "R14": 1.2999999999999972,
+   "R15": 1.2999999999999972,
+   "R16": 1.2999999999999972,
+   "R17": 3.0999999999999943,
+   "R18": 3.0999999999999943,
+   "R19": 4.099999999999994,
+   "R2": 1.8499999999999943,
+   "R20": 4.099999999999994,
+   "R21": 4.099999999999994,
+   "R3": 3.7950000000000017,
+   "R4": 3.75,
+   "R5": 5.75,
+   "R6": 5.75,
+   "R7": 1.8499999999999943,
+   "R8": 3.75,
+   "R9": 3.8499999999999943,
+   "TH1": 5.75,
+   "U1": 1.6999999999999886,
+   "U2": 7.439999999999998,
+   "U3": 2.7875000000000085,
+   "U4": 2.7750000000000057,
+   "U6": 7.849999999999994,
+   "U7": 2.673000000000002,
+   "U8": 2.5,
+   "U9": 1.6817999999999955
+  },
+  "minimum_gap_mm": 0.3245010000000015,
+  "required_mm": 0.2,
+  "rules_unmeasured": [],
+  "source": "board constraint",
+  "tolerance_mm": 1e-06,
+  "units": "mm",
+  "unmeasured": [
+   {
+    "pad_index": 60,
+    "pad_loc": [
+     75.25,
+     48.25
+    ],
+    "pad_ref": "U1.61",
+    "reason": "simplified pad geometry: chamfered pad"
+   }
+  ]
+ },
+ "pad_edge_conflicts": 0,
+ "pad_edge_shortfall": 0,
+ "pad_edge_unmeasured": 1,
+ "pairs": [
+  {
+   "a": "J4",
+   "area_mm2": 1.181,
+   "b": "J5",
+   "contained": false,
+   "contained_frac": 0.7511,
+   "depth_mm": 0.6384,
+   "kind": "courtyard",
+   "locked_ref": "",
+   "overlap_rect": [
+    73.675,
+    39.975,
+    75.525,
+    40.6134
+   ],
+   "shorts": [],
+   "side": "F",
+   "waived": false,
+   "waiver": ""
+  }
+ ],
+ "parts_by_side": {
+  "B": 49,
+  "F": 6
+ },
+ "parts_by_side_basis": "every footprint BLOCK (#726): blocks sharing one reference are keyed with an ordinal suffix and counted separately. `pad_bearing` restricts that to blocks carrying at least one pad, and it is the count the populated-side verdict is taken from -- a zero-pad graphic on the back does not make a board double-sided.",
+ "parts_by_side_blocks": {
+  "B": 49,
+  "F": 6
+ },
+ "reflow_passes": 2,
+ "smd_parts_by_side": {
+  "B": 48,
+  "F": 2
+ },
+ "through_hole_by_side": {
+  "B": 1,
+  "F": 4
+ },
+ "through_hole_parts": 5,
+ "unsoldered_parts_by_side": {
+  "B": 0,
+  "F": 0
+ },
+ "verdict": "buildable (blocking 0)",
+ "waived": 0,
+ "zero_pad_blocks_by_side": {
+  "B": [],
+  "F": []
+ }
+}

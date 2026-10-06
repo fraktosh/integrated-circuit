@@ -1,0 +1,260 @@
+{
+  "blocker_nets": [],
+  "checklist": {
+    "a_off_outline": {
+      "courtyard": [
+        [
+          "J2",
+          1.07
+        ],
+        [
+          "J4",
+          0.1233
+        ]
+      ],
+      "pad_copper": []
+    },
+    "b_body_overlap_pairs": [],
+    "b_body_seam": {
+      "mm": -1.2704,
+      "ref_a": "J4",
+      "ref_b": "J5",
+      "source_a": "fab",
+      "source_b": "fab"
+    },
+    "b_body_sources": {
+      "C1": "fab",
+      "C10": "fab",
+      "C11": "fab",
+      "C12": "fab",
+      "C13": "fab",
+      "C14": "fab",
+      "C15": "fab",
+      "C16": "fab",
+      "C17": "fab",
+      "C18": "fab",
+      "C2": "fab",
+      "C3": "fab",
+      "C4": "fab",
+      "C5": "fab",
+      "C6": "fab",
+      "C7": "fab",
+      "C8": "fab",
+      "C9": "fab",
+      "D2": "fab",
+      "J1": "fab",
+      "J2": "fab",
+      "J3": "fab",
+      "J4": "fab",
+      "J5": "fab",
+      "J6": "fab",
+      "R1": "fab",
+      "R10": "fab",
+      "R11": "fab",
+      "R12": "fab",
+      "R13": "fab",
+      "R14": "fab",
+      "R15": "fab",
+      "R16": "fab",
+      "R17": "fab",
+      "R18": "fab",
+      "R19": "fab",
+      "R2": "fab",
+      "R20": "fab",
+      "R21": "fab",
+      "R3": "fab",
+      "R4": "fab",
+      "R5": "fab",
+      "R6": "fab",
+      "R7": "fab",
+      "R8": "fab",
+      "R9": "fab",
+      "TH1": "fab",
+      "U1": "fab",
+      "U2": "fab",
+      "U3": "fab",
+      "U4": "fab",
+      "U6": "fab",
+      "U7": "fab",
+      "U8": "fab",
+      "U9": "fab"
+    },
+    "b_courtyard_advisory_pairs": [
+      [
+        "J4",
+        "J5",
+        1.181,
+        0.6384
+      ]
+    ],
+    "b_courtyard_blocking_pairs": [
+      [
+        "J4",
+        "J5",
+        1.181,
+        0.6384
+      ]
+    ],
+    "b_courtyard_census_error": null,
+    "b_courtyard_overlap_mm2": 1.181,
+    "b_cross_side_stacks": [
+      [
+        "J4",
+        "U9",
+        24.19
+      ],
+      [
+        "U1",
+        "U4",
+        18.15
+      ],
+      [
+        "U1",
+        "U2",
+        16.32
+      ],
+      [
+        "U1",
+        "U8",
+        13.94
+      ],
+      [
+        "U1",
+        "U3",
+        10.5
+      ],
+      [
+        "U1",
+        "U6",
+        6.6
+      ],
+      [
+        "U1",
+        "U7",
+        3.16
+      ]
+    ],
+    "b_pad_clearance_pairs": [],
+    "c_hole_conflicts": [],
+    "c_locked_refs": [],
+    "d_moved": {
+      "expected": null,
+      "match": null,
+      "moved": 0
+    }
+  },
+  "defect_panels": [],
+  "defects": [],
+  "describe": {
+    "worst": [
+      {
+        "body_stack": false,
+        "kind": "off-board courtyard",
+        "note": "1.07mm out",
+        "refs": [
+          "J2"
+        ],
+        "view": [
+          70.48,
+          56.93,
+          84.12,
+          68.87
+        ]
+      },
+      {
+        "body_stack": false,
+        "kind": "off-board courtyard",
+        "note": "0.1233mm out",
+        "refs": [
+          "J4"
+        ],
+        "view": [
+          66.847,
+          24.277,
+          84.026,
+          42.113
+        ]
+      }
+    ]
+  },
+  "failed_nets": [],
+  "instrument": {
+    "before": null,
+    "board": "C:\\Users\\mata magarmach\\Documents\\goals\\fl watch\\integrated-circuit\\krt_placement\\20261006_194827_place\\input.kicad_pcb",
+    "clearance": 0.1,
+    "clearance_requested": null,
+    "defect_json": [],
+    "defect_notes": [],
+    "floors": {
+      "board_edge_clearance": {
+        "source": "board constraint",
+        "value": 0.2
+      },
+      "clearance": {
+        "source": "board netclass",
+        "value": 0.1
+      }
+    },
+    "ignore_nets": [],
+    "net_lists": {
+      "ignore_nets": {
+        "flag": "--ignore-nets",
+        "matched": 0,
+        "nets_matched": 0,
+        "requested": 0,
+        "unmatched": []
+      },
+      "ratsnest_nets": {
+        "flag": "--ratsnest-nets",
+        "matched": 0,
+        "nets_matched": 0,
+        "requested": 0,
+        "unmatched": []
+      }
+    },
+    "ratsnest_nets": [],
+    "size": 1600,
+    "summary_json": null,
+    "supersample": 2
+  },
+  "metrics": {
+    "align": 0.0,
+    "corridor_cut": 0.0,
+    "crossings": 511,
+    "edge": 37.55364554680194,
+    "facing": 0.0,
+    "halo": 531.0426056185014,
+    "hole_shortfall": 0.0,
+    "hpwl": 762.8469020000001,
+    "length": 761.2242384317339,
+    "locked_contact_pairs": 0,
+    "oob_amount": 1.1932990000000068,
+    "oob_area": 13.133081180800104,
+    "oob_count": 2,
+    "orient": 0.0,
+    "overlap_area": 1.1810399999999912,
+    "pad_conflict_pairs": 0,
+    "pad_intersection_pairs": 0,
+    "pad_overlap_pairs": 0,
+    "pad_shortfall": 0.0,
+    "total": 6439.8204895970375
+  },
+  "moved": 0,
+  "moved_refs": [],
+  "no_outline": false,
+  "panels": [
+    {
+      "label": "input",
+      "path": "C:/Users/mata magarmach/Documents/goals/fl watch/integrated-circuit/krt_placement/20261006_194827_place/wk/render0_F.png",
+      "side": "F",
+      "view": null
+    },
+    {
+      "label": "input",
+      "path": "C:/Users/mata magarmach/Documents/goals/fl watch/integrated-circuit/krt_placement/20261006_194827_place/wk/render0_B.png",
+      "side": "B",
+      "view": null
+    }
+  ],
+  "unplaced": false
+}
